@@ -122,15 +122,15 @@ if (!process.env.ABC_USERNAME && !process.env.ABC_PASSWORD) {
       console.log('no more exs left for this month!')
       // click back until no dom change!
       const htmlHashNow = await hashPageContent()
-      console.log(htmlHashNow)
+      console.log(`current hash=${htmlHashNow}`)
       console.log('go back a month...')
       await page.evaluate('JsCaGoPrev(\"JsCaContainer\",\"myJsCaTOC\",1)') // click prev months
       const htmlHashOld = await hashPageContent()
-      console.log(htmlHashOld)
+      console.log(`perv page hash=${htmlHashOld}`)
       if (htmlHashNow === htmlHashOld) {
         console.log('find same hash and all exs for all month should be done!')
         // take screenshot to debug
-        await page.screenshot({path: 'example.png'})
+        await page.screenshot({path: 'screenshot.png'})
         break
       }
     }
