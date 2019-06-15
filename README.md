@@ -1,5 +1,7 @@
 # mysmartabc-automation
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mingchuno/mysmartabc-automation.svg)](https://greenkeeper.io/)
+
 It will login http://www.mysmartabc.com/ and automatic do all the exercises.
 
 ## How to use
